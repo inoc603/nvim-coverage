@@ -5,8 +5,8 @@ local M = {
 local defaults = {
 	commands = true,
 	highlights = {
-		covered = { fg = "#C3E88D" },
-		uncovered = { fg = "#F07178" },
+		covered = { fg = "#C3E88D", ctermfg = "Green" },
+		uncovered = { fg = "#F07178", ctermfg = "Red" },
 		summary_border = { link = "FloatBorder" },
 		summary_normal = { link = "NormalFloat" },
 		summary_cursor_line = { link = "CursorLine" },
@@ -57,6 +57,9 @@ local defaults = {
 			coverage_command = "grcov ${cwd} -s ${cwd} --binary-path ./target/debug/ -t coveralls --branch --ignore-not-existing --token NO_TOKEN",
 			project_files_only = true,
 			project_files = { "src/*", "tests/*" },
+		},
+		go = {
+			coverage_file = "cover.out",
 		},
 	},
 }

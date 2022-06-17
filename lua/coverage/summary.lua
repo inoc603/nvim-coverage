@@ -389,7 +389,9 @@ M.show = function()
 	popup = window.percentage_range_window(
 		adjust_width_percentage(config.opts.summary.width_percentage),
 		config.opts.summary.height_percentage,
-		{},
+		{
+			winblend = 0,
+		},
 		border_opts
 	)
 
